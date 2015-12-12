@@ -2,7 +2,9 @@
 
 module.exports = function(app){
 
-    var sentiment = require('sentiment');
+    var apiKey = process.env.TRANSLATE_KEY
+    ,   sentiment = require('sentiment')
+    ,   googleTranslate = require('google-translate')(apiKey);
 
     return {
         index: function(phrase){
