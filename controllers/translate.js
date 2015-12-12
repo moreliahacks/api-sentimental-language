@@ -8,7 +8,7 @@ module.exports = function(app){
     return {
         index: function(req, res, next){
             var translate = new Translate();
-            json.promise(translate.index(), res, next);
+            json.promise(translate.index(req.query.text), res, next);
         }
     };
 
