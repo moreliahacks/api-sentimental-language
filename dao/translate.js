@@ -8,7 +8,9 @@ module.exports = function(app){
 
     return {
         index: function(phrase){
-            return q.resolve(sentiment(phrase));
+            return q.nbind(googleTranslate.translate, googleTranslate)(phrase, 'es', 'en').then(function(response){
+                return sentiment(response.translatedText);
+            });
         }
     };
 
