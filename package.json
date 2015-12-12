@@ -1,0 +1,24 @@
+{
+  "name": "sentimental-language",
+  "version": "1.0.0",
+  "description": "Api to get sentimental punctuation of a phrase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moreliahacks/api-sentimental-language.git"
+  },
+  "keywords": [
+    "moreliahacks",
+    "sentimental",
+    "punctuation"
+  ],
+  "author": "Sebastián Osorio <im@svzosorio.co>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/moreliahacks/api-sentimental-language/issues"
+  },
+  "homepage": "https://github.com/moreliahacks/api-sentimental-language#readme"
+}
