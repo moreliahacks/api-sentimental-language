@@ -1,14 +1,17 @@
 'use strict';
 
 module.exports = function(app){
+    log.debug(app.utilities);
 
-    var apiKey = process.env.TRANSLATE_KEY
-    ,   sentiment = require('sentiment')
-    ,   googleTranslate = require('google-translate')(apiKey);
+    var apiKey          = process.env.TRANSLATE_KEY
+    ,   sentiment       = app.utilities.sentiment
+    ,   translate       = app.utilities['google-translate'](apiKey);
 
     return {
         index: function(phrase){
-            return q.nbind(googleTranslate.translate, googleTranslate)(phrase, 'es', 'en').then(function(response){
+            return q.nbind(translate.translate, translate)(
+                phrase, 'es', 'en'
+            ).then(function(response){
                 return sentiment(response.translatedText);
             });
         }
