@@ -2,8 +2,8 @@
 
 module.exports = function(app){
 
-    var Translate     = app.dao.Translate
-    ,   json    = new app.views.Json();
+    var Translate   = app.dao.Translate
+    ,   json        = new app.views.Json();
 
     return {
         index: function(req, res, next){
