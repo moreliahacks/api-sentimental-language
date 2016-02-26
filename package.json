@@ -24,7 +24,6 @@
   "homepage": "https://github.com/moreliahacks/api-sentimental-language#readme",
   "dependencies": {
     "bool.js": "^0.5.8",
-    "google-translate": "^1.0.3",
     "sentiment": "^1.0.6"
   }
 }
