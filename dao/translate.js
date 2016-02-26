@@ -6,7 +6,7 @@ module.exports = function(app){
     sentimentEs   = require('../plugins/sentiment_es.json');
 
     return {
-        index: function(phrase){            
+        index: function(phrase){
             return q.fcall(sentiment, phrase, sentimentEs);
         }
     };
