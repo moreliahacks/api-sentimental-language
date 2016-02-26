@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/moreliahacks/api-sentimental-language#readme",
   "dependencies": {
-    "bool.js": "^0.4.1",
+    "bool.js": "^0.5.8",
     "google-translate": "^1.0.3",
-    "sentiment": "^1.0.2"
+    "sentiment": "^1.0.6"
   }
 }

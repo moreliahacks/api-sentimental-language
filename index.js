@@ -5,4 +5,9 @@ var booljs = require('bool.js');
 booljs('org.moreliahacks.sentimental')
     .setServerLoader('booljs-express')
     .setDatabaseLoader('booljs-nomodel')
-    .run();
+    .run()
+    .catch(
+        function(error){
+            console.log(error);
+        }
+    );

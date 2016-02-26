@@ -2,16 +2,12 @@
 
 module.exports = function(app){
 
-    var apiKey = process.env.TRANSLATE_KEY
-    ,   sentiment = require('sentiment')
-    ,   googleTranslate = require('google-translate')(apiKey);
+    var sentiment = require('sentiment'),
+    sentimentEs   = require('../plugins/sentiment_es.json');
 
     return {
-        index: function(phrase){
-            return q.nbind(googleTranslate.translate, googleTranslate)(phrase, 'es', 'en').then(function(response){
-                return sentiment(response.translatedText);
-            });
+        index: function(phrase){            
+            return q.fcall(sentiment, phrase, sentimentEs);
         }
     };
-
 };
